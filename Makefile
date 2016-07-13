@@ -3,7 +3,7 @@ PROJ := usb-demo
 CC := gcc
 SRCS := $(wildcard *.c)
 OBJS := $(patsubst %.c, %.o, $(SRCS))
-CFLAGS += -lusb-1.0
+CFLAGS += -lusb-1.0 -lmtp
 
 $(PROJ) : $(OBJS)
 	$(CC) $< $(CFLAGS) -o $@
